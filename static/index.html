@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sparkle.js</title>
+    <style type="text/css">
+        body {
+            background-color: #3f3f3f;
+        }
+
+        header {
+            padding: 25px;
+            color: gold;
+            text-align: center;
+            border-radius: 5px;
+            background-color: purple;
+            position: relative;
+            font-family: sans-serif;
+            font-weight: 200;
+        }
+
+        header .title {
+            font-size: xx-large;
+            margin-bottom: 5px;
+        }
+
+        article {
+            padding: 0 5vw;
+            color: #efefef;
+        }
+
+        a {
+            color: lightskyblue;
+        }
+
+        pre {
+            color: #d9d9d9;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: auto auto auto;
+            width: 300px;
+            height: 300px;
+            max-width: 90vw;
+            max-height: 90vw;
+            margin: 20px auto;
+            border-radius: 5px;
+            border: 5px solid #2d2d2d;
+        }
+
+        .grid>div {
+            background-color: #2d2d2d;
+            margin: 20%;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: auto auto auto;
+            width: 300px;
+            height: 300px;
+            max-width: 90vw;
+            max-height: 90vw;
+            margin: 20px auto;
+            border-radius: 5px;
+            border: 5px solid #2d2d2d;
+        }
+
+        .grid-2>div {
+            background-color: #2d2d2d;
+            margin: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="sparkle">
+        <div class="title">sparkle.js</div>
+        <span class="description">The Vanilla JS Sparkle Solution</span>
+    </header>
+    <article>
+        <h1>Welcome to sparkle.js</h1>
+        <h2>Getting started</h2>
+        <p>
+            Load <a href="../dist/sparkle.min.js">sparkle.min.js</a> and add it to
+            your
+            project.
+            Locate you HTMLElement via JS ans .sparkle() it!
+        </p>
+        <p>
+        </p>
+        <p>
+            To get the beautiful Header Sparkling effect, try this:
+            <pre>
+    document.getElementById("sparkle").sparkle({
+        position: "afterbegin",
+        stars: 25,
+        minAge: 500,
+        maxAge: 2000,
+        size: 10
+    });
+            </pre>
+        </p>
+        <h2>Documentation</h2>
+        <p>Before we begin, please note, that sparkle.js enforces <code>position: relative</code> if the requested
+            element does not have <code>fixed</code>, <code>absolute</code> or <code>relative</code> set.</p>
+        <p>You can select your elements with your well known JS Syntax. Important is, that your selector returns an
+            <code>HTMLElement</code> or <code>NodeList</code>.
+        </p>
+        <p>Select an element with Children:</p>
+        <pre>
+    document.querySelector("#example-1").sparkle();
+        </pre>
+
+        <div id="example-1" class="grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <p>Or select multiple Elements at once:</p>
+        <pre>
+    document.querySelectorAll("#example-2>div").sparkle();
+            </pre>
+        <div id="example-2" class="grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <p>You can even use your own <code>Strings</code> or <code>HTML</code></p>
+        <pre>
+    var i = 0;
+    document.querySelectorAll("#example-3>div").forEach(el => {
+        i++
+        el.sparkle({
+            starsource: `${i}`,
+            count: i
+        });
+    });
+            </pre>
+        <div id="example-3" class="grid-2">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <p>...and existing <code>HTMLElements</code>
+        </p>
+        <pre>
+    document.querySelectorAll("#example-4").sparkle({
+        starsource: document.querySelector(".smile"),
+        count: 16,
+        minAge: 300,
+        maxAge: 700
+    });
+    <code><</code>div class="smile"
+        style="width: 16px; height: 16px;line-height: 18px;font-size:16px; text-shadow: 0 0 8px yellow;">
+        😊
+    <code><</code>/div>
+            </pre>
+        <div class="smile"
+            style="width: 16px; height: 16px;line-height: 18px;font-size:16px; text-shadow: 0 0 8px yellow;">
+            😊
+        </div>
+        <div id="example-4" class="grid-2">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </article>
+    <script src="../dist/sparkle.min.js"></script>
+    <script>
+        document.getElementById("sparkle").sparkle({
+            position: "afterbegin",
+            count: 25,
+            minAge: 500,
+            maxAge: 2000,
+            size: {
+                width: "15px",
+                height: "15px"
+            }
+        });
+        document.querySelector("#example-1").sparkle();
+        document.querySelectorAll("#example-2>div").sparkle();
+        var i = 0;
+        document.querySelectorAll("#example-3>div").forEach(el => {
+            i++
+            el.sparkle({
+                starsource: `${i}`,
+                count: i
+            });
+        });
+        document.querySelectorAll("#example-4").sparkle({
+            starsource: document.querySelector(".smile"),
+            count: 16,
+            minAge: 300,
+            maxAge: 700
+        });
+    </script>
+</body>
+
+</html>

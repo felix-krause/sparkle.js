@@ -1,0 +1,24 @@
+{
+  "name": "sparkle.js",
+  "version": "1.0.0",
+  "description": "The Vanilla JS Sparkle Solution",
+  "main": "webpack.config.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "css-loader": "^3.2.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "webpack": "^3.5.5",
+    "style-loader": "^1.0.0"
+  },
+  "scripts": {
+    "test": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "author": "Felix Krause (https://efkah.github.io)",
+  "license": "MIT"
+}
