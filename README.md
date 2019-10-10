@@ -2,7 +2,8 @@
 The Vanilla JS Sparkle Solution
 
 ## Introduction
-Please visit the product page served at https://efkah.github.io/sparkle.js/
+Please visit the product page served at https://efkah.github.io/sparkle.js/.
+
 It's just a copy of `static/index.html`, so dont expect too much.
 
 ## Contribute
