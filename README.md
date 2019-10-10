@@ -18,9 +18,9 @@ docker run --rm -it -v ${PWD}:/app jmfirth/webpack bash
 Once your on the shell, try this:
 
 ```bash
-  npm install
-  npm link webpack
-  webpack
+npm install
+npm link webpack
+webpack
 ```
 
 And that's it!
