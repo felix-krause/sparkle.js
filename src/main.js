@@ -1,4 +1,4 @@
-import './efkah.less';
+import './main.less';
 import SparkleDiv from './sparkle-div.js';
 
 HTMLElement.prototype.sparkle = function (properties) {
@@ -19,8 +19,7 @@ NodeList.prototype.sparkle = function (properties) {
     );
 }
 HTMLElement.prototype.stopSparkling = function () {
-    this.querySelectorAll("sparkle-star-div").forEach(el => el.remove);
-    // this.remove();
+    this.querySelectorAll("sparkle-div").forEach(el => el.remove);
 }
 NodeList.prototype.stopSparkling = function () {
     this.forEach(el => el.stopSparkling);
