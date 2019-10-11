@@ -1,6 +1,7 @@
 # Private
 project/
 package-lock.json
+.vscode/
 
 # Logs
 logs
