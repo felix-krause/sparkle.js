@@ -15,7 +15,6 @@ export default class SparkleStarDiv extends HTMLElement {
         window.setTimeout(() => {
             star.remove();
             parentElement.insertAdjacentElement("beforeend", new SparkleStarDiv(parentElement));
-
         }, age)
     }
 }
