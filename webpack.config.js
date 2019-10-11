@@ -18,7 +18,7 @@ module.exports = {
             ],
         }, ],
     },
-    entry: './src/efkah.js',
+    devtool: 'source-map',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'sparkle.min.js'
