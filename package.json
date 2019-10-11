@@ -1,7 +1,7 @@
 {
   "name": "sparkle.js",
   "version": "1.0.0",
-  "description": "The Vanilla JS Sparkle Solution",
+  "description": "An animation based sparkling idea",
   "main": "webpack.config.js",
   "dependencies": {},
   "devDependencies": {
