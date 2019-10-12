@@ -1,0 +1,7 @@
+---
+ name: Basic Nodelist Sparkling
+ description: Example of a grid sparkled with sparkle.js 
+ authors:
+   - Felix Krause
+ resources:
+   - https://github.com/efkah/sparkle.js/releases/download/v1.0/sparkle.min.js

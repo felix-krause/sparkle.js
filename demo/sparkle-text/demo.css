@@ -1,0 +1,36 @@
+body {
+    background-color: #3f3f3f;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+    border-radius: 5px;
+    background-color: #2d2d2d;
+    border: 5px solid #363636;
+}
+
+.grid>div {
+    background-color: midnightblue;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.legend {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: purple;
+    color: gold;
+}
+
+.legend .desc {
+    margin: -10px 0 10px 0;
+}
