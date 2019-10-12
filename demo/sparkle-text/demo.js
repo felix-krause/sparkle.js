@@ -1,8 +1,10 @@
 window.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll(".grid").sparkle({
-        starsource: document.querySelector(".smile"),
-        count: 16,
-        minAge: 300,
-        maxAge: 700
+    var i = 0;
+    document.querySelectorAll(".grid>div").forEach(el => {
+        i++
+        el.sparkle({
+            starsource: `${i}`,
+            count: i
+        });
     });
 });
