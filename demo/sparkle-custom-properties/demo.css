@@ -1,0 +1,19 @@
+body {
+    background-color: #3f3f3f;
+}
+
+header {
+    padding: 25px;
+    color: gold;
+    text-align: center;
+    border-radius: 5px;
+    background-color: purple;
+    position: relative;
+    font-family: sans-serif;
+    font-weight: 200;
+}
+
+header .title {
+    font-size: xx-large;
+    margin-bottom: 5px;
+}
