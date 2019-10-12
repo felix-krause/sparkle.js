@@ -5,4 +5,3 @@
    - Felix Krause
  resources:
    - https://github.com/efkah/sparkle.js/releases/download/v1.0/sparkle.min.js
- load_type: b
