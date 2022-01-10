@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "An animation based sparkling idea",
   "main": "webpack.config.js",
+  "scripts": {
+    "start": "npx webpack --watch"
+  },
   "dependencies": {},
   "devDependencies": {
     "babel-minify-webpack-plugin": "^0.3.1",
@@ -12,9 +15,6 @@
     "style-loader": "^1.0.0",
     "webpack": "^3.5.5",
     "webpack-cli": "^4.2.0"
-  },
-  "scripts": {
-    "test": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
