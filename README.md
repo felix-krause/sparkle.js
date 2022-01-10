@@ -68,16 +68,15 @@ document.getElementById("default-setup").sparkle({
 
 ## Developer Information
 
-You will need to `npm install` and `webpack` for development. If you are familiar with those, there is no need to read on.
+You will need to `webpack` and `webpack-cli` for development. If you are familiar with those, there is no need to read on.
 
 ### Building...
 
 Try this:
 
 ```bash
-  npm install
-  npm link webpack
-  webpack
+  npm ci
+  npx webpack
 ```
 
 _Done!_ Well, that is, if all you wanna do is build.
@@ -87,7 +86,7 @@ _Done!_ Well, that is, if all you wanna do is build.
 I prefer using `live-server` running on my local machine. To do the magic, run:
 
 ```bash
-webpack --watch
+npx webpack --watch
 ```
 
 You can also use `webpack-dev-server`.
