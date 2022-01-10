@@ -198,12 +198,23 @@
                 count: i
             });
         });
-        document.querySelectorAll("#example-4").sparkle({
-            starsource: document.querySelector(".smile"),
-            count: 16,
-            minAge: 300,
-            maxAge: 700
-        });
+        
+        var sparkling = false;
+        const intervalFunc = () => {
+            if (!sparkling) {
+                document.querySelectorAll("#example-4").sparkle({
+                    starsource: document.querySelector(".smile"),
+                    count: 16,
+                    minAge: 300,
+                    maxAge: 700
+                });
+                sparkling = true;
+            } else {
+                document.querySelector("#example-4>sparkle-div").remove();
+                sparkling = false;
+            }
+        };
+        window.setInterval(intervalFunc, 3000);
     </script>
 </body>
 
